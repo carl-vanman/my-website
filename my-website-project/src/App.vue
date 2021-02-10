@@ -1,32 +1,74 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <header>
+      <NavComp class="nav" />
+    </header>
+    <main>
+      <div class="wrapper">
+        <router-view/>
+      </div>
+    </main>
   </div>
 </template>
 
+<script>
+import NavComp from './components/NavComp.vue'
+
+export default {
+  components: {
+    NavComp
+  }
+}
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Spartan', sans-serif;
+  /* background-color: var(--bg-color); */
 }
 
-#nav {
-  padding: 30px;
+:root {
+  --bg-color: #202020;
+  --light-gray: #DBDBDB;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  --font-small: 11px;
+  --font-regular: 400;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+#app {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr minmax(80px, auto);
+  grid-template-rows: 1fr;
+  background-color: var(--bg-color);
+  header {
+    grid-column: -2 / -1;
+    grid-row: 1 / -1;
   }
+  main {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;    
+  }
+}
+</style>
+<style>
+main {
+  display: grid;
+  grid-template-columns: 1fr min(1170px, 100%) 1fr;
+}
+.wrapper {
+    grid-column: 2 / -2;
+    display: grid;
+    /*grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); */ /* hur funkar den här? här läggds det till columns som behövs i antal men inte mer än 12*/
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); /* denna tänkte jag från början, men ovan kanske är bättre? här läggs det dock upptill 12columns*/
+    /*grid-template-rows: auto;*/    
+    column-gap: 30px;
+    /* row-gap: 30px; */
+    width: max(100%, 270px); /* dumt å sätta en min width med max()? */
 }
 </style>

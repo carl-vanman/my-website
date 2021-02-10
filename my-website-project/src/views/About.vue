@@ -1,5 +1,16 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <section class="about">
+    
+  </section>
 </template>
+<script>
+export default {
+
+}
+</script>
+
+<style scoped>
+.about{
+  grid-column: 1 / -1;
+}
+</style>
