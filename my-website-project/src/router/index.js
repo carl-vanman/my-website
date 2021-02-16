@@ -13,13 +13,18 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
+    path: '/Cbout',
     name: 'About',
     component: About
   },
   {
-    path: '/projects',
+    path: '/Crojects',
     name: 'Projects',
+    component: Projects
+  },
+  {
+    path: '/Contact',
+    name: 'Contact',
     component: Projects
   }
 ]

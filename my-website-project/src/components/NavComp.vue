@@ -10,6 +10,9 @@
             <li>
                 <router-link class="nav__link projects" to="Projects">Projects</router-link>
             </li>
+            <li>
+                <router-link class="nav__link contact" to="contact">Contact</router-link>
+            </li>
         </ul>
     </nav>
 </template>

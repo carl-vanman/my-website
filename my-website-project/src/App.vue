@@ -35,9 +35,11 @@ export default {
 :root {
   --bg-color: #202020;
   --light-gray: #DBDBDB;
+  --white: #ffffff;
 
   --font-small: 11px;
   --font-regular: 400;
+  --font-xBold: 900;
 }
 
 #app {
