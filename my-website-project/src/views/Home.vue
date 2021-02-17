@@ -1,5 +1,6 @@
 <template>
   <section class="home">
+    <p class="titleSmile">smile</p>
     <img class="smileyLogo" src="@/assets/smiley3.svg" alt="">
     <div class="placement">
       <div class="title front">
@@ -13,6 +14,7 @@
         <span>E</span>
         <span>N</span>
         <span>D</span>
+        <span>.</span>
       </div>
     </div>  
   </section>
@@ -36,15 +38,26 @@ export default {
     grid-column: 1 / -1;
     height: 100vh;
     background-image: url('../assets/letterC.svg');
-    background-position: center;
+    background-position: left;
     background-size: 120%;
     background-repeat: no-repeat;
     display: flex;
     align-items: flex-end;
     justify-content: center;
   
+  .titleSmile {
+    position: absolute;
+    top: 35px;
+    left: 50px;
+    font-size: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--forest-green);
+  }
+
   .smileyLogo {
     align-self: center;
+    margin-left: 20%;
     z-index: 999;
   }
 
@@ -61,6 +74,9 @@ export default {
   }
   .front {
     margin-bottom: -5%;
+  }
+  .end span:last-child{
+    color: var(--forest-green);
   }
 }
 </style>

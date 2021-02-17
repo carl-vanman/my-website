@@ -29,12 +29,15 @@ export default {
   margin: 0;
   padding: 0;
   font-family: 'Spartan', sans-serif;
-  /* background-color: var(--bg-color); */
 }
 
 :root {
+  background-color: var(--bg-color);
+
   --bg-color: #202020;
   --light-gray: #DBDBDB;
+  --blood-red: #E70013;
+  --forest-green: #028345;
   --white: #ffffff;
 
   --font-small: 11px;
@@ -47,10 +50,12 @@ export default {
   display: grid;
   grid-template-columns: 1fr minmax(80px, auto);
   grid-template-rows: 1fr;
-  background-color: var(--bg-color);
   header {
     grid-column: -2 / -1;
     grid-row: 1 / -1;
+  }
+  .nav {
+    height: 100%;
   }
   main {
     grid-column: 1 / 2;
@@ -58,6 +63,7 @@ export default {
   }
 }
 </style>
+
 <style>
 main {
   display: grid;
